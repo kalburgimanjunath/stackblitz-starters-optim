@@ -86,7 +86,7 @@ export default function Navbar() {
                   </li>
                 </ul>
               </div>
-              <form action="#" method="GET" class="hidden lg:block lg:pl-2">
+              {/* <form action="#" method="GET" class="hidden lg:block lg:pl-2">
                 <label for="topbar-search" class="sr-only">
                   Search
                 </label>
@@ -113,7 +113,7 @@ export default function Navbar() {
                     placeholder="Search"
                   />
                 </div>
-              </form>
+              </form> */}
             </div>
             <div class="flex items-center lg:order-2">
               <button
