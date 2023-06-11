@@ -2,7 +2,7 @@ import { faker } from '@faker-js/faker';
 export default function SearchJobs() {
   const randomName = faker.person.fullName();
   const Companys = (numrows = 10) => {
-    return [...Array(1000)].map((x, i) => (
+    return [...Array(2)].map((x, i) => (
       <div className="border-2 m-2 p-5 shadow-lg">
         <div key={i} className="font-bold">
           {faker.person.jobArea()}
@@ -47,8 +47,8 @@ export default function SearchJobs() {
         <div>
           <Companys />
         </div>
-        <div className="">
-          <Individual />
+        <div className="border-2 p-5 w-full md:w-auto">
+          {/* <Individual /> */}
           <h4>description</h4>
           <h4>expertise</h4>
           <h4>about company</h4>
