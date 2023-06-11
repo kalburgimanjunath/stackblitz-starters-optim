@@ -14,9 +14,18 @@ export default function SearchJobs() {
       </div>
     ));
   };
+  const Individual = (numrows = 10) => {
+    return [...Array(1)].map((x, i) => (
+      <div className="border-2 m-2 p-5 shadow-lg">
+        <div>Hello world {faker.company.name()}</div>
+        <div>{faker.person.jobType()}</div>
+        <div>{faker.person.jobDescriptor()}</div>
+      </div>
+    ));
+  };
   return (
     <div>
-      <div className="flex m-2 p-4 justify-content-space-between w-full">
+      <div className="flex m-2 p-4 justify-content-space-between w-full align-items-baseline">
         <input
           type="text"
           placeholder="Search keywords,job title,description"
@@ -34,8 +43,16 @@ export default function SearchJobs() {
           Search Jobs
         </button>
       </div>
-      <div>
-        <Companys />
+      <div className="flex grid grid-cols-auto md:grid-cols-2">
+        <div>
+          <Companys />
+        </div>
+        <div className="">
+          <Individual />
+          <h4>description</h4>
+          <h4>expertise</h4>
+          <h4>about company</h4>
+        </div>
       </div>
     </div>
   );
